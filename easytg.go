@@ -16,10 +16,9 @@ func NewBot(api string) Bot {
 	}
 }
 
-func (b Bot) Msg(message string, convId int64) Bot {
+func (b *Bot) Msg(message string, convId int64) {
 	b.Message = message
 	b.ConvID = convId
-	return b
 }
 
 func (b Bot) Send() error {
